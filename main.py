@@ -18,7 +18,7 @@ logging.basicConfig(filename='app.log', filemode='a', format='%(asctime)s - %(na
 
 logger = logging.getLogger(__name__)
 
-# Days to deliver news
+# Days to deliver the news
 newsdays = ['Tuesday', 'Thursday', 'Saturday']
 
 while True:
@@ -29,7 +29,7 @@ while True:
   xdaymdy = xday.strftime("%x") #date in mo/da/yr format
   
   if xday.strftime("%A") in newsdays: #only run on newsdays  
-    print("current utc hour: ", datetime.datetime.utcnow().strftime("%H"))
+    print("current utc hour:", datetime.datetime.utcnow().strftime("%H"))
     #below code causes to execute between 6am-8am (12-14 utc) cent time
     if int(datetime.datetime.utcnow().strftime("%H")) >= 12 and int(datetime.datetime.utcnow().strftime("%H")) < 14:
       # check status file to see if app has already run today
