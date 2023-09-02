@@ -19,9 +19,15 @@ def gather_top_news():
   descriptions = []
   contents = []
   
+  #filters to use to discard stories
+  links_filter = ["newyorker.com/humor"]
+  contents_filter = ["rewritten"]
+  
   #iterate over response sorting for later adding to a csv file
   for story in response['results']:
-    if "rewritten" not in story["description"]: #avoid getting sued filter
+    #check filter lists for not in story["description"] or
+    # story["link"]  #avoid getting sued filter
+    if not (any(string in story["description"] for string in contents_filter)) and not (any(string in story["link"] for string in links_filter)):
       links.append(story["link"])
       titles.append(story["title"])
       descriptions.append(story["description"])

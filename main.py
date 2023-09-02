@@ -19,7 +19,7 @@ logging.basicConfig(filename='app.log', filemode='a', format='%(asctime)s - %(na
 logger = logging.getLogger(__name__)
 
 # Days to deliver the news
-newsdays = ['Tuesday', 'Thursday', 'Saturday']
+newsdays = ['Tuesday', 'Thursday', 'Saturday', 'Sunday', 'Monday', 'Wednesday']
 
 while True:
   print ("Restarting...")
