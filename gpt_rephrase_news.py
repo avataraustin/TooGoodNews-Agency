@@ -37,7 +37,7 @@ def gpt_article_rephrase(txt_content):
     {"role": "system",
     "content": "You are a witty news article writer"},
     {"role": "user",
-    "content": "Rephrase this into a ridiculously positive news article: " + txt_content}
+    "content": "Rephrase this into a ridiculously positive and enthusiastically optimistic news article. It should be condensed down to a few paragraphs in length: " + txt_content}
     ]
   )
 
