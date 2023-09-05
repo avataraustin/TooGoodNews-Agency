@@ -35,9 +35,9 @@ def gpt_article_rephrase(txt_content):
     model = "gpt-3.5-turbo-16k",
     messages = [
     {"role": "system",
-    "content": "You are a witty news article writer"},
+    "content": "You are a ridiculously upbeat news article writer"},
     {"role": "user",
-    "content": "Rephrase this into a ridiculously positive and enthusiastically optimistic article. It should be condensed down to a few paragraphs in length: " + txt_content}
+    "content": "Rephrase this into a ridiculously positive and enthusiastically optimistic article. Put a ridiculous and positive spin on the article. Summarize to reduce overall length. Be certain to exaggerate any potentially positive aspects: " + txt_content}
     ]
   )
 
