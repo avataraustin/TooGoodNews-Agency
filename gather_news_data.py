@@ -21,7 +21,7 @@ def gather_top_news():
   
   #filters to use to discard stories
   links_filter = ["newyorker.com/humor"]
-  descriptions_filter = ["rewritten","football","basketball","baseball","sport"]
+  descriptions_filter = ["rewritten","football","Football","basketball","Basketball","baseball","Baseball","sport","Sport"]
   
   #iterate over response sorting for later adding to a csv file
   for story in response['results']:
