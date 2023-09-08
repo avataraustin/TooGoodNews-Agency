@@ -36,7 +36,7 @@ deal_two = '''<a target="_blank" href="https://www.amazon.com/hz/audible/gift-me
 def compose_message_html():
   final_string = ""
   final_string += "<h3>Always see the positive side... even if it's ridiculous.</h3>"
-  final_string += """<h5>These articles were intended to be written as overly optimistic satire and may not always be completely factual, please visit the "Inspiration for this satire" links for more factual details.</h5>"""
+  final_string += """<h6>These articles were intended to be written as overly optimistic satire while preserving the facts, however they may not always be completely factual. Please visit the "Inspiration for this satire" links for more factual details. </h6>"""
   final_string += '''<img src="https://toogood.news/wp-content/uploads/2023/08/toogoodtxt175.png" alt="Image description" style="display: block; margin: 0 auto;"><br> '''
   final_string += deal_one
   # Title, Contents, Link ----temp
