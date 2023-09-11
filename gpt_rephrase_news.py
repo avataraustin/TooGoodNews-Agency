@@ -19,9 +19,9 @@ def gpt_to_title(txt_chunk):
     model = "gpt-3.5-turbo",
     messages = [
     {"role": "system",
-    "content": "You are a witty news article writer"},
+    "content": "You are a ridiculously upbeat news article writer"},
     {"role": "user",
-    "content": "Rephrase this into a ridiculously positive short descriptive article title: " + txt_chunk}
+    "content": "Rephrase this into a ridiculously positive short descriptive article title in English: " + txt_chunk}
     ]
   )
 
