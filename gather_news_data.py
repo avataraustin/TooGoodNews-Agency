@@ -41,6 +41,19 @@ def gather_top_news():
     writer = csv.writer(f)
     writer.writerow(['Link', 'Title', 'Description', 'Contents']) # write header row
     writer.writerows(zipped_news) # write data rows
+
+  # extra step to reduce number of rows of stored articles
+  with open('stored_articles.csv', 'r') as file:
+    reader = csv.reader(file)
+    rows = list(reader)
+
+  # here we set to remove the last 3 rows in the csv
+  remrows = rows[:-3]
+
+  # here we save (override) the modified and reduced csv
+  with open('stored_articles.csv', 'w', newline='') as file:
+    writer = csv.writer(file)
+    writer.writerows(remrows)
   
 if __name__ == "__main__":
   gather_top_news()
