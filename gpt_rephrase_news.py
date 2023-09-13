@@ -79,12 +79,12 @@ def produce_content_csv():
   
   for story in combo_titles:
     gpt_titles.append(gpt_to_title(story))
-    time.sleep(10)
+    time.sleep(20)
     print('processing gpt title')
     
   for story in contents:
     gpt_contents.append(gpt_article_rephrase(story))
-    time.sleep(15)
+    time.sleep(60)
     print('processing gpt content')
     
   zipped_gpt_news = zip(links, gpt_titles, gpt_contents)
