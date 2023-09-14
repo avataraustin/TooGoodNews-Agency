@@ -29,9 +29,9 @@ def bring_order_gptd_articles():
 #####
 
 #Advertising offer html deals:
-deal_one = '''<a target="_blank" href="https://www.amazon.com/dp/B00NB86OYE/?ref_=assoc_tag_ph_1485906643682&_encoding=UTF8&camp=1789&creative=9325&linkCode=pf4&tag=suavevibecom-20&linkId=5bff7607fba3c6d8d0e50ebed256f681">Try Audible Premium Plus and Get Up to Two Free Audiobooks</a> <br> '''
+deal_one = '''<a target="_blank" href="https://hotellook.tp.st/TJUioPBZ">It's travel season, get a great deal on hotel accommodations.</a> <br> '''
 
-deal_two = '''<a target="_blank" href="https://www.amazon.com/hz/audible/gift-membership-detail?tag=suavevibecom-20&ref_=assoc_tag_ph_1524210806852&_encoding=UTF8&camp=1789&creative=9325&linkCode=pf4&linkId=802c2f58fb3ba22a0ee796f22fbec256">Give the Gift of an Audible Membership</a> <br> '''
+deal_two = '''<a target="_blank" href="https://hotellook.tp.st/TJUioPBZ">Need to get away? Get a great deal on your next hotel stay.</a> <br> '''
 
 def compose_message_html():
   final_string = ""
@@ -59,7 +59,7 @@ def compose_message_html():
           final_string += f'<a href="{item}"target="_blank">Inspiration for this satire</a><br>'
           final_string += " <br> "
     final_string += deal_two      
-    final_string += """<div style="text-align: center;font-size:12px;"><p>As an Amazon Associate we earn from qualifying purchases. This email is from TooGood.news - ADM OFFERINGS LLC, USA for more info visit <a href>https://toogood.news</a></p></div><br><div style="text-align: center;font-size:12px;"><a href="[[UNSUB_LINK_EN]]">click here to unsubscribe</a></div>"""
+    final_string += """<div style="text-align: center;font-size:12px;"><p>This email is from TooGood.news - ADM OFFERINGS LLC, USA for more info visit <a href>https://toogood.news</a></p></div><br><div style="text-align: center;font-size:12px;"><a href="[[UNSUB_LINK_EN]]">click here to unsubscribe</a></div>"""
   print("returning final_string")
   return final_string
   
