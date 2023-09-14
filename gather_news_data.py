@@ -33,8 +33,8 @@ def gather_top_news():
       descriptions.append(story["description"])
       contents.append(story["content"])
     
-  
-  zipped_news = zip(links, titles, descriptions, contents, strict=True)
+  # lists must be sliced the same. [:-3] will reduce to 7 stories.
+  zipped_news = zip(links[:-3], titles[:-3], descriptions[:-3], contents[:-3], strict=True)
   
   #store the response results in a csv file for later use
   with open('stored_articles.csv', 'w', newline='') as f:
@@ -42,18 +42,6 @@ def gather_top_news():
     writer.writerow(['Link', 'Title', 'Description', 'Contents']) # write header row
     writer.writerows(zipped_news) # write data rows
 
-  # extra step to reduce number of rows of stored articles
-  with open('stored_articles.csv', 'r') as file:
-    reader = csv.reader(file)
-    rows = list(reader)
-
-  # here we set to remove the last 3 rows in the csv
-  remrows = rows[:-3]
-
-  # here we save (override) the modified and reduced csv
-  with open('stored_articles.csv', 'w', newline='') as file:
-    writer = csv.writer(file)
-    writer.writerows(remrows)
   
 if __name__ == "__main__":
   gather_top_news()
