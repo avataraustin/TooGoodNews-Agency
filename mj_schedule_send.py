@@ -26,7 +26,7 @@ def schedule_send_campaign(email_html, email_txt):
     'Sender': 'TooGoodNews',
     'SenderEmail': 'noreply@mailing.toogood.news',
     'Subject': 'Too Good News',
-    'ContactsListID': '81981', #81981 = debug, 80961 = live
+    'ContactsListID': '80961', #81981 = debug, 80961 = live
     'Title': 'Too Good Newsletter'
   }
   result = mailjet.campaigndraft.create(data = data)
