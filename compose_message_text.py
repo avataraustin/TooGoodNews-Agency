@@ -61,6 +61,11 @@ def compose_message_html():
     final_string += deal_two      
     final_string += """<div style="text-align: center;font-size:12px;"><p>This email is from TooGood.news - ADM OFFERINGS LLC, USA for more info visit <a href>https://toogood.news</a></p></div><br><div style="text-align: center;font-size:12px;"><a href="[[UNSUB_LINK_EN]]">click here to unsubscribe</a></div>"""
   print("returning final_string")
+
+  # save a txt copy of the final string
+  with open("final_string_text.txt", "w") as txt_file:
+    txt_file.write(final_string)
+  
   return final_string
   
   
