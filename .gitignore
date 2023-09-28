@@ -2,3 +2,4 @@ venv/
 *.log
 *.csv
 status.txt
+final_string_text.txt
