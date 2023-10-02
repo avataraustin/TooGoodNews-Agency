@@ -58,6 +58,15 @@ def compose_message_html():
           final_string += "<br>"
           final_string += f'<a href="{item}"target="_blank">Inspiration for this satire</a><br>'
           final_string += " <br> "
+    final_string += """<br> <table style="width: 100%;">
+    <tr>
+        <td align="center">
+            <a href="https://twitter.com/intent/tweet?text=Check out this new ridiculously positive newsletter.&url=https://toogood.news&hashtags=toogoodnews,positive,goodnews" target="_blank">
+                <img height="20" src="https://about.twitter.com/content/dam/about-twitter/x/brand-toolkit/logo-black.png.twimg.1920.png" style="border-radius:3px;display:block;" width="20">
+            </a>
+        </td>
+    </tr>
+</table> <br>"""
     final_string += deal_two      
     final_string += """<div style="text-align: center;font-size:12px;"><p>This email is from TooGood.news - ADM OFFERINGS LLC, USA for more info visit <a href>https://toogood.news</a></p></div><br><div style="text-align: center;font-size:12px;"><a href="[[UNSUB_LINK_EN]]">click here to unsubscribe</a></div>"""
   print("returning final_string")
