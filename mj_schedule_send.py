@@ -27,7 +27,8 @@ def schedule_send_campaign(email_html, email_txt):
     'SenderEmail': 'noreply@mailing.toogood.news',
     'Subject': 'Too Good News',
     'ContactsListID': '80961', #81981 = debug, 80961 = live
-    'Title': 'Too Good Newsletter'
+    'Title': 'Too Good Newsletter',
+    'EditMode': 'html2'  # this allows scheduled email to be edited on mj website
   }
   result = mailjet.campaigndraft.create(data = data)
   #print(result.status_code)
