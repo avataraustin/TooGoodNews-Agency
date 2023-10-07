@@ -12,7 +12,7 @@ def gather_top_news():
   api = NewsDataApiClient(apikey=os.environ['NEWS_API'])
   
   # You can pass empty or with request parameters {ex. (country = "us")}
-  response = api.news_api(q = "AP", country = "us", category = "top", language = "en")
+  response = api.news_api(q = "'news' NOT 'rewritten'" , country = "us", category = "top", language = "en")
   
   links = []
   titles = []
@@ -22,12 +22,13 @@ def gather_top_news():
   #filters to use to discard stories
   links_filter = ["newyorker.com/humor"]
   descriptions_filter = ["rewritten","football","Football","basketball","Basketball","baseball","Baseball","sport","Sport"]
+  contents_filter = []
   
   #iterate over response sorting for later adding to a csv file
   for story in response['results']:
     #check filter lists for not in story["description"] or
     # story["link"]  #avoid getting sued filter
-    if not (any(string in story["description"] for string in descriptions_filter)) and not (any(string in story["link"] for string in links_filter)):
+    if not (any(string in story["description"] for string in descriptions_filter)) and not (any(string in story["link"] for string in links_filter)) and not (any(string in story["content"] for string in contents_filter)):
       links.append(story["link"])
       titles.append(story["title"])
       descriptions.append(story["description"])
