@@ -21,7 +21,7 @@ def gpt_to_title(txt_chunk):
     {"role": "system",
     "content": "You are a ridiculously upbeat news article writer"},
     {"role": "user",
-    "content": "Rephrase this into a ridiculously positive, short, and descriptive article title in English. Do not include authors or publications: " + txt_chunk}
+    "content": "Rephrase this into a ridiculously positive, short, and descriptive article title in English. Do not include authors or publications. Do not include any anti Trump or anti conservative statements, it should be politically neutral. : " + txt_chunk}
     ]
   )
 
