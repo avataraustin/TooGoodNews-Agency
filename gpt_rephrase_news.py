@@ -21,7 +21,7 @@ def gpt_to_title(txt_chunk):
     {"role": "system",
     "content": "You are a ridiculously upbeat news article writer"},
     {"role": "user",
-    "content": "Rephrase this into a ridiculously positive, short, and descriptive article title in English. Do not include authors or publications. Do not include anything overly critical of Donald Trump, pro libreral, or anti-conservative statements, it should be politically neutral. : " + txt_chunk}
+    "content": "Rephrase this into a ridiculously positive, short, and descriptive article title in English. Do not include authors or publications. : " + txt_chunk}
     ]
   )
 
@@ -37,7 +37,7 @@ def gpt_article_rephrase(txt_content):
     {"role": "system",
     "content": "You are a ridiculously upbeat news article writer"},
     {"role": "user",
-    "content": "Rephrase this into a ridiculously positive and enthusiastically optimistic article. Put a ridiculous and positive spin on the article. Summarize to reduce overall length. Be certain to exaggerate any potentially positive aspects: " + txt_content}
+    "content": "Rephrase this into a ridiculously positive and enthusiastically optimistic article. Put a ridiculous and positive spin on the article. Summarize to reduce overall length. Be certain to exaggerate any potentially positive aspects. Do not include anything overly critical of Donald Trump, pro libreral, or anti-conservative statements, it should be politically neutral. : " + txt_content}
     ]
   )
 
